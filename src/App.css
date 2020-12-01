@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.App-header{
+  min-height: 100vh;
+}
+
 .slider{
   position: absolute;
   top: 0;
@@ -66,7 +70,23 @@ section{
   top: 70%;
   left: 10%;
   font-size: 100px;
-  transform: translate(-20%, -70%);
+  transform: translate(-10%, -70%);
   color:white;
   z-index: 3;
+}
+
+.section-2{
+  background-color: #749C75;
+  min-height: 80vh
+}
+
+.section-3{
+  background-color: #F4F5F5;
+  min-height: 80vh
+}
+
+@media screen and (max-width: 1024px) {
+  section{
+    height: 90vh;
+  }
 }

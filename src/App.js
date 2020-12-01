@@ -1,7 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import Menu from './images/menu.svg';
-import Bus from './images/bus1.png';
+import Bus from './images/bus-2.jpg';
 import './App.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { gsap, TweenMax, TweenLite, Power2,TimelineMax }  from 'gsap';
 
 
@@ -36,8 +37,13 @@ function App() {
           </div>
         </section>
       </header>
-
       <div ref={el => (slider = el)} className="slider"></div>
+      {/* <div className="section-2">
+
+      </div>
+      <div className="section-3">
+
+      </div> */}
     </div>
   );
 }
