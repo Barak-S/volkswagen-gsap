@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Menu from './images/menu.svg';
-import Bus from './images/bus-2.jpg';
+import Logo from './images/v-logo.png';
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import { gsap, TweenMax, TweenLite, Power2,TimelineMax }  from 'gsap';
@@ -27,23 +27,23 @@ function App() {
     <div className="App">
       <header className="App-header">
         <nav>
-          <h3 ref={el => (logo = el)} id="logo">volkswagen</h3>
+          <h3 ref={el => (logo = el)} id="logo"><img src={Logo} style={{height: 35, paddingTop: 18, paddingRight: 10}}></img>Volkswagen</h3>
           <img ref={el => (hamburger = el)} style={{height: 25}} src={Menu} className="hamburger"></img>
         </nav>
         <section>
           <div ref={el => (hero = el)} className="hero">
-            <img src={Bus}></img>
-            <h1 ref={el => (headline = el)} className="headline">Dream Big</h1>
+            <img src={'https://images.unsplash.com/photo-1455275803899-34511e680e27?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80'}></img>
+            <h3 ref={el => (headline = el)} className="headline">Dream Big</h3>
           </div>
         </section>
       </header>
       <div ref={el => (slider = el)} className="slider"></div>
-      {/* <div className="section-2">
+      <div className="section-2">
 
       </div>
       <div className="section-3">
-
-      </div> */}
+        <button className="shop-button">Shop Now</button>
+      </div>
     </div>
   );
 }
