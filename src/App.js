@@ -3,6 +3,7 @@ import Menu from './images/menu.svg';
 import Logo from './images/v-logo.png';
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+import { useIntersection } from "react-use";
 import { gsap, TweenMax, TweenLite, Power2,TimelineMax }  from 'gsap';
 
 
@@ -13,6 +14,29 @@ function App() {
   let logo = useRef(null)
   let hamburger = useRef(null)
   let headline = useRef(null)
+
+  // let section2 = useRef(null)
+
+  // const intersection = useIntersection(section2, {
+  //   root: null,
+  //   rootMargin: '0px',
+  //   threshold: 1
+  // })
+
+  // const fadeIn = el =>{
+  //   gsap.to(el,1,{
+  //       opacity: 1,
+  //       ease: "Power4.out",
+  //   })
+  // }
+  // const fadeOut = el =>{
+  //   gsap.to(el,1,{
+  //       opacity: 0,
+  //       ease: "Power4.out",
+  //   })
+  // }
+
+  // intersection && intersection.intersectionRatio > 1 && fadeIn(".section-2")
 
   useEffect(()=>{     
     console.log(hero,slider,logo, hamburger, headline)
@@ -38,12 +62,10 @@ function App() {
         </section>
       </header>
       <div ref={el => (slider = el)} className="slider"></div>
-      <div className="section-2">
-
-      </div>
+      {/* <div ref={section2} className="section-2"></div>
       <div className="section-3">
         <button className="shop-button">Shop Now</button>
-      </div>
+      </div> */}
     </div>
   );
 }
